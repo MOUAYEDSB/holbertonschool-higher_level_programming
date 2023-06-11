@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def multiple_returns(sentence):
     lenght = len(sentence)
     if sentence:
@@ -7,4 +6,3 @@ def multiple_returns(sentence):
     else:
         first = None
     return (lenght, first)
-	
