@@ -16,6 +16,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """Returns the JSON string representation"""
@@ -36,6 +37,7 @@ class Base:
 
         with open(filename, "w") as file:
             file.write(json_string)
+
     @staticmethod
     def from_json_string(json_string):
         """Returns the list of the JSON string representation"""
@@ -56,6 +58,7 @@ class Base:
 
         dummy.update(**dictionary)
         return dummy
+
     @classmethod
     def load_from_file(cls):
         """Returns a list of instances"""
