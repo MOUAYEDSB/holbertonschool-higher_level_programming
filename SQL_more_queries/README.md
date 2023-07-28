@@ -1,6 +1,9 @@
 # SQL - More queries 💻
 
 ![App Screenshot](https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-higher-level_programming+/274/66988091.jpg)
+<p align="center">
+  <img src="https://github.com/waldyr/Sublime-Installer/blob/master/sublime_text.png?raw=true" alt="Sublime's custom image"/>
+</p>
 
 # Description 💬
 - SQL - More queries is an advanced level project that builds upon the foundational concepts of SQL. In this project, we will explore more complex and sophisticated queries to enhance ours skills in managing and manipulating relational databases. We will learn about subqueries, which are nested queries used for more intricate data retrieval. Additionally, we will dive deeper into table joins, enabling us to combine data from multiple tables effectively. Furthermore, the project covers UNION, a powerful feature for merging results from different queries.
