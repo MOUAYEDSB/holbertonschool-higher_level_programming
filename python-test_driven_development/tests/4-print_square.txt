@@ -1,37 +1,49 @@
-===================================================================================
-This is a doctests for the 2-matrix_divided.py module
-===================================================================================
-Using "2-matrix_divided"
-===================================================================================
-Import Module:
+The ``4-print_square`` module
+======================
+
+Using ``print_square``
+-------------------
 
 >>> print_square = __import__('4-print_square').print_square
 
-Tests:
-
+**Basic input**
 >>> print_square(4)
 ####
 ####
 ####
 ####
->>> print_square(10)
-##########
-##########
-##########
-##########
-##########
-##########
-##########
-##########
-##########
-##########
->>> print_square(0)
->>> print_square(1)
-#
->>> print_square(-1)
+
+**Negative input**
+>>> print_square(-4)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/home/queise/holbertonschool-higher_level_programming/python-test_driven_development/4-print_square.py", line 9, in print_square
-    raise TypeError("size must be >= 0")
-TypeError: size must be >= 0
+...
+ValueError: size must be >= 0
+
+**None input**
+>>> print_square(None)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+
+**String input**
+>>> print_square('str')
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+**Float input**
+>>> print_square(1.2)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+**size equal to zero**
+>>> print_square(0)
 >>>
+
+**No argument input**
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
