@@ -1,48 +1,58 @@
-===================================================================================
-This is a doctests for the 5-text_indentation.py module
-===================================================================================
-Using "5-text_indentation.py"
-===================================================================================
-Import Module:
+The ``5-text_indentation`` module
+======================
 
+Using ``text_indentation``
+-------------------
 
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
->>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
-... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
-... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
-... Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
-... Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
-... rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
-... stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
-... cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
-... beatiorem! Iam ruinas videres""")
+**Passing normal string** 
+>>> text_indentation("String is string")
+String is string
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+**Passing string with ":" **
+>>> text_indentation("Holberton :")
+Holberton :
+<BLANKLINE>
 
- Quonam modo?
 
- Utrum igitur tibi litteram videor an totas paginas commovere?
+**Passing None as input**
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
 
- Non autem hoc:
 
- igitur ne illud quidem.
+**No argument passed**
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
 
- Fortasse id optimum, sed ubi illud:
 
- Plus semper voluptatis?
+**Empty string**
+>>> text_indentation("")
 
- Teneo, inquit, finem illi videri nihil dolere.
+**only punctuation characters**
+>>> text_indentation(".?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
 
- Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
+**String with leading and trailing spaces**
+>>> text_indentation("     This is a test.     ")
+This is a test.
+<BLANKLINE>
 
- Si id dicis, vicimus.
-
- Inde sermone vario sex illa a Dipylo stadia confecimus.
-
- Sin aliud quid voles, postea.
-
- Quae animi affectio suum cuique tribuens atque hanc, quam dico.
-
- Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
->>>
+**String with spaces around punctuation characters**
+text_indentation("Hello . World : Python ? Cool")
+Hello .
+<BLANKLINE>	
+World :
+<BLANKLINE>
+Python ?
+<BLANKLINE>
+Cool
